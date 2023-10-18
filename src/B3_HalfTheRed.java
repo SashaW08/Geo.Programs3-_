@@ -23,9 +23,15 @@ public class B3_HalfTheRed extends World {
                 }
                else if(col>=407 && row<=386){
                     plane.setPixelColor(red, blue/2, blue/2);
+                    if(red<50&&blue<50&&green<50&&red>1&&row>300){
+                        plane.setPixelColor(0,255,0);
+                    }
                 }
                 else if(col<=407 && row>=386){
                     plane.setPixelColor(red,red,red);
+                    if(red>170&&red<245&&blue<125&&green<135){
+                            plane.setPixelColor(0, 0, 255);
+                    }
                 }
                 else if(col>=407&&row>=386){
                     plane.setPixelColor(200,red,blue/2);
@@ -34,7 +40,7 @@ public class B3_HalfTheRed extends World {
         }
         plane.teleport(0,0);
         plane.setColor(255,215,0);
-        plane.trailWidth = 6;
+        plane.trailWidth = 10;
         plane.pausetime = 1;
         plane.startingAngle(0);
         plane.isTrail = true;
